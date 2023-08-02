@@ -19,7 +19,7 @@ export function fetchCatByBreed(breedId) {
   return axios
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
     .then(response => {
-      return console.log('Я тут', response);
+      return response.data;
     })
     .catch(error => {
       console.log(error);
