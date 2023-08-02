@@ -1,4 +1,3 @@
-'use strict';
 import Notiflix from 'notiflix';
 
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
@@ -40,7 +39,9 @@ hideLoader();
 hideErrorRef();
 function targetSelectClickHandler(event) {
   const breedId = event.target.value;
+
   showLoader();
+
   fetchCatByBreed(breedId)
     .then(breedId => {
       renderMarkingsByBreed(breedId);

@@ -19,6 +19,10 @@ export function fetchCatByBreed(breedId) {
   return axios
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
     .then(response => {
+      if (response.data.length === 0) {
+        alert('Сhoose the second value');
+      }
+
       return response.data;
     })
     .catch(error => {
