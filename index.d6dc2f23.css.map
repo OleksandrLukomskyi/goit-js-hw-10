@@ -1,0 +1,1 @@
+{"mappings":"ACAA,wBAOA","sources":["index.d6dc2f23.css","src/common.css"],"sourcesContent":["li {\n  list-style-type: none;\n}\n\n.error {\n  color: red;\n}\n\n/*# sourceMappingURL=index.d6dc2f23.css.map */\n","li {\n   \n      list-style-type: none;\n   \n}\n\n \n.error {\n   color: red;\n}"],"names":[],"version":3,"file":"index.d6dc2f23.css.map"}
