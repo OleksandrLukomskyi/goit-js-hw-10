@@ -70,7 +70,6 @@ function renderMarkingsByBreed(breedId) {
     .join('');
   catInfoRef.innerHTML = markup;
 }
-
 function showLoader() {
   loaderRef.style.display = 'block';
 }
