@@ -37,20 +37,24 @@ fetchBreeds()
   });
 hideLoader();
 hideErrorRef();
+
 function targetSelectClickHandler(event) {
   const breedId = event.target.value;
 
   showLoader();
+  hideSelectedBreeds();
 
   fetchCatByBreed(breedId)
     .then(breedId => {
       renderMarkingsByBreed(breedId);
-      hideLoader();
     })
     .catch(error => {
       showErrorRef();
-      hideLoader();
+
       console.error(error);
+    })
+    .finally(() => {
+      hideLoader();
     });
 }
 
@@ -84,4 +88,8 @@ function hideErrorRef() {
 
 function showErrorRef() {
   errorRef.style.display = 'block';
+}
+
+function hideSelectedBreeds() {
+  catInfoRef.innerHTML = '';
 }
